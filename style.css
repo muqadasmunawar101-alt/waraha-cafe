@@ -656,70 +656,126 @@ nav {
         font-size: 16px;
     }
 }
-
+/* Mobile Responsive Gallery */
 /* =========================
-   POPUP / MODAL (Order + Contact confirmation)
+   MOBILE RESPONSIVE FIX
 ========================= */
-.popup-overlay {
-    position: fixed;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.55);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    opacity: 0;
-    visibility: hidden;
-    transition: 0.3s ease;
-    z-index: 1000;
-}
+@media (max-width: 600px) {
 
-.popup-overlay.active {
-    opacity: 1;
-    visibility: visible;
-}
+    /* Home */
+    #home {
+        min-height: 85vh;
+        padding: 60px 20px;
+        margin: 20px 10px;
+        border-radius: 15px;
+        background-size: cover;
+        background-position: center;
+    }
 
-.popup-box {
-    background: #fff8ef;
-    padding: 40px 35px;
-    border-radius: 20px;
-    text-align: center;
-    max-width: 380px;
-    width: 90%;
-    position: relative;
-    transform: translateY(-20px);
-    transition: 0.3s ease;
-    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
-}
+    .home-content {
+        max-width: 100%;
+    }
 
-.popup-overlay.active .popup-box {
-    transform: translateY(0);
-}
+    .home-content h1,
+    .home-heading {
+        font-size: 34px;
+        line-height: 1.15;
+    }
 
-.popup-icon {
-    font-size: 50px;
-    margin-bottom: 15px;
-}
+    .welcome-text {
+        font-size: 12px;
+        letter-spacing: 2px;
+    }
 
-.popup-box h3 {
-    font-size: 24px;
-    color: #4b2e20;
-    margin-bottom: 12px;
-}
+    .home-description {
+        font-size: 15px;
+        line-height: 1.6;
+    }
 
-.popup-box p {
-    font-size: 15px;
-    color: #6b4028;
-    line-height: 1.6;
-}
+    .home-buttons {
+        gap: 10px;
+    }
 
-.popup-close {
-    position: absolute;
-    top: 10px;
-    right: 14px;
-    background: none;
-    border: none;
-    font-size: 26px;
-    cursor: pointer;
-    color: #6b4028;
-    line-height: 1;
+    .home-button {
+        padding: 12px 20px;
+        font-size: 14px;
+    }
+
+
+    /* Gallery */
+    #gallery {
+        padding: 60px 20px;
+        margin: 20px 10px;
+    }
+
+    .gallery-container {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .gallery-item {
+        width: 100%;
+    }
+
+    .gallery-container img {
+        width: 100%;
+        height: auto;
+        max-height: none;
+        object-fit: contain;
+        border-radius: 12px;
+    }
+
+    .gallery-caption {
+        font-size: 16px;
+    }
+
+    .gallery-quote {
+        padding: 20px;
+    }
+
+    .gallery-quote p {
+        font-size: 17px;
+    }
+
+
+    /* Menu */
+    #menu {
+        padding: 60px 20px;
+        margin: 20px 10px;
+    }
+
+    .menu-card {
+        width: 100%;
+        max-width: 350px;
+    }
+
+
+    /* About */
+    #about {
+        padding: 60px 20px;
+        margin: 20px 10px;
+    }
+
+    .about-image,
+    .about-text {
+        min-width: 100%;
+    }
+
+    .about-image img {
+        height: auto;
+    }
+
+
+    /* Contact */
+    #contact {
+        padding: 60px 20px;
+        margin: 20px 10px;
+    }
+
+    .contact-info,
+    .contact-form {
+        width: 100%;
+        height: auto;
+        min-height: 390px;
+    }
 }
